@@ -15,6 +15,17 @@ namespace SSPM
 		public SuccessProjectScreen ()
 		{
 			InitializeComponent ();
-		}
+            var ssproject = new List<string>();
+            ssproject.Add("Project1");
+            ssproject.Add("Project2");
+            ssproject.Add("Project3");
+            ssproject.Add("Project4");
+            ssproject.Add("Project5");
+            ssproject.Add("Project6");
+
+            Successproject.ItemsSource = ssproject;
+            
+        }
+        
 	}
 }

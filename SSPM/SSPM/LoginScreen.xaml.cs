@@ -30,9 +30,7 @@ namespace SSPM
                      {
                         new InProcessProjectScreen(),
                         new SuccessProjectScreen(),
-                        new Setting(),
-                        new Dummy()
-
+                        new EtcProject()
                     }
                     /* BarBackgroundColor = Color.FromHex("#5DCDF3"),
                      BarTextColor = Color.White,*/
