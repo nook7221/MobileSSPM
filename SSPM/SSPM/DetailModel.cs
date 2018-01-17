@@ -4,13 +4,8 @@ using System.Text;
 
 namespace SSPM
 {
-    class Addprojet
+    class DetailModel
     {
-        public int id { get; set; }
-        public string Name { get; set; }
-
-        public string Detail { get; set; }
         public string projectName { get; set; } = "First";
-
     }
 }

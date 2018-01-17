@@ -45,7 +45,7 @@ namespace SSPM
         private async void ProjectLists_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             var addproject = e.Item as Addprojet;
-            var page = new InitialScreen();
+            var page = new Dummy();
             NavigationPage.SetHasBackButton(page, false);
             await Navigation.PushAsync(page);
         }

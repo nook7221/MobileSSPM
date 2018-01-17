@@ -21,25 +21,38 @@ namespace SSPM
             string username = Mainuser.Text;
             string pass = Mainpassword.Text;
 
-            if (username == "admin1234" && pass == "admin1234")
+            var action = await DisplayAlert("Notification", "คุณต้องการเข้าสู่ระบบใช่หรือไม่", "YES", "NO");
+            if (action)
             {
-                var page = new TabbedPage
+                if (username == "qwer" && pass == "qwer")
                 {
-                    BackgroundColor = Color.FromHex("#F5F3F6"),
-                    Children =
-                     {
-                        new InProcessProjectScreen(),
-                        new SuccessProjectScreen(),
-                        new EtcProject()
-                    }
-                    /* BarBackgroundColor = Color.FromHex("#5DCDF3"),
-                     BarTextColor = Color.White,*/
-                };
-                NavigationPage.SetHasBackButton(page, false);
-                await Navigation.PushAsync(page);
+                    var page = new TabbedPage
+                    {
+                        BackgroundColor = Color.FromHex("#F5F3F6"),
+                        Children =
+                        {
+                            new InProcessProjectScreen(),
+                            new SuccessProjectScreen(),
+                            new EtcProject()
+                        }
+
+                    };
+
+
+                    NavigationPage.SetHasBackButton(page, false);
+                    await Navigation.PushAsync(page);
+                }
+                else
+                {
+                    await DisplayAlert("Notification", "เข้าสู่ระบบล้มเหลว! Username หรือ Password ผิด", "Cancle");
+                }
 
             }
-
+            else
+            {
+                return;
+            }
         }
+
     }
-}
+    }

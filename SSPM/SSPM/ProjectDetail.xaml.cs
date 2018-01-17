@@ -10,11 +10,14 @@ using Xamarin.Forms.Xaml;
 namespace SSPM
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class Setting : ContentPage
+	public partial class ProjectDetail : ContentPage
 	{
-		public Setting ()
+
+        public ProjectDetail ()
 		{
 			InitializeComponent ();
-		}
+
+        }
+
 	}
 }

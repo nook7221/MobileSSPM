@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace SSPM
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class InitialScreen : ContentPage
+	public partial class ProjectDetail : ContentPage
 	{
-		public InitialScreen ()
+		public ProjectDetail ()
 		{
 			InitializeComponent ();
 		}
@@ -26,14 +26,7 @@ namespace SSPM
 
 
         }
-        public async void button_Clicked2(object Sender, EventArgs e)
-        {
-            var page = new RegisterScreen();
-            NavigationPage.SetHasBackButton(page, false);
-            await Navigation.PushAsync(page);
 
-
-        }
         
     }
 }
